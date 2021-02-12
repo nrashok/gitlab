@@ -9,7 +9,7 @@ fac_smoke_tests:
     script:
         - newman --version
         - npm install -g newman-reporter-html newman-reporter-htmlextra
-        - newman run  Final_SmokeTests.postman_collection.json  -e Final_FCURL1.0.postman_environment.json -d Data_driven.json --reporters cli,htmlextra,junit --reporter-htmlextra-export report.html --reporter-junit-export report.xml
+        - newman run  SmokeTests.postman_collection.json  -e Smoke_Test_Env.postman_environment.json -d smoke_Data_driven.json --reporters cli,htmlextra,junit --reporter-htmlextra-export report.html --reporter-junit-export report.xml
     artifacts:
         when: always
         paths:
