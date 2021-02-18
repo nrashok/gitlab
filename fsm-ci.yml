@@ -1,0 +1,19 @@
+stages:
+    - fsm-checks
+
+fsmlite_tests:
+    stage: fsm-checks
+    image: 
+        name: postman/newman_alpine33
+        entrypoint: [""]
+    script:
+        - newman --version
+        - npm install -g newman-reporter-html newman-reporter-htmlextra
+        - newman run  c.json  -e e.json -d d.json --reporters cli,htmlextra,junit --reporter-htmlextra-export report.html --reporter-junit-export report.xml
+    artifacts:
+        when: always
+        paths:
+            - report.html
+        reports:
+            junit: report.xml
+            #dbz
