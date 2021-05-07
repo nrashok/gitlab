@@ -1,7 +1,6 @@
 stages:
     - reg-tests
-    
-    
+        
 fac_regr_tests:
     stage: reg-tests
     image: 
