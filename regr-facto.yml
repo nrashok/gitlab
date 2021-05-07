@@ -8,8 +8,8 @@ fac_regr_tests:
         entrypoint: [""]
     script:
         - newman --version
-        - npm install -g newman-reporter-html newman-reporter-htmlextra
-        - newman run  Regression_Suit.postman_collection.json  -e FCURL1.0.postman_environment.json -d Datafile.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
+        - npm install -g newman-reporter-html
+        - newman run  Regression_Suit.postman_collection.json  -e FCURL1.0.postman_environment.json -d Datafile.json --r html report.html
     artifacts:
         when: always
         paths:
