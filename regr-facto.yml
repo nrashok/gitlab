@@ -10,6 +10,7 @@ fac_regr_tests:
         - newman --version
         - npm install -g newman-reporter-html
         - newman run  Regression_Suit.postman_collection.json  -e FCURL1.0.postman_environment.json -d Datafile.json --reporters cli,html,junit --reporter-html-export report.html --reporter-junit-export report.xml
+    timeout: 3 hours 30 minutes
     artifacts:
         when: always
         paths:
