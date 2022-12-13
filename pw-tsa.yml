@@ -13,7 +13,7 @@ tests:
     - npm install ci
     - npm install -D @playwright/test
     - npm ci
-    - npx playwright test --project=$PROJECT --shard=$SHARD_INDEX/$SHARD_TOTAL
+    - npx playwright test --workers 4 --project=$PROJECT --shard=$SHARD_INDEX/$SHARD_TOTAL
   timeout: 4 hours 30 minutes
   artifacts:
     paths:
