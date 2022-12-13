@@ -1,2 +1,3 @@
-# gitlab
-CI/CD
+# GitLab
+
+CI/CD pipelines
